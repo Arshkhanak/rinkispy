@@ -1,5 +1,9 @@
-git add codemagic.yaml
-
-git commit -m 'Add first workflow'
-
-git push
+workflows:
+  android:
+    name: build, test & publish Android version
+    scripts:
+      - ...
+  ios:
+    name: build, test & publish iOS version
+    scripts:
+      - ...
