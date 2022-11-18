@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "166878242931",
-    "project_id": "spyder-90870",
-    "storage_bucket": "spyder-90870.appspot.com"
+    "project_number": "272261566641",
+    "firebase_url": "https://spyder-9e533-default-rtdb.firebaseio.com",
+    "project_id": "spyder-9e533",
+    "storage_bucket": "spyder-9e533.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:166878242931:android:f396b3c0cb1ef0337fe206",
+        "mobilesdk_app_id": "1:272261566641:android:ed426c1e4136cb3fd7d290",
         "android_client_info": {
-          "package_name": "com.mine.spy"
+          "package_name": "com.rinki.parent"
         }
       },
       "oauth_client": [
         {
-          "client_id": "166878242931-16ekcio04h5bio19m678q38l502cnbu1.apps.googleusercontent.com",
+          "client_id": "272261566641-1ei67c8ic8sptfe006rkf2kj6oub4ohu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyADyleSc1oMFcAUEwcFRrowAqWg-c8qIvk"
+          "current_key": "AIzaSyDVjlnuKWtnrD5W4tBGfgqtWwjXOwlf-Ak"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "166878242931-16ekcio04h5bio19m678q38l502cnbu1.apps.googleusercontent.com",
+              "client_id": "272261566641-1ei67c8ic8sptfe006rkf2kj6oub4ohu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
