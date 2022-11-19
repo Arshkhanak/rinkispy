@@ -20,9 +20,17 @@ workflows:
 
     scripts:
 
-      - name: Build Android debug
+    
 
-        script: ./gradlew assemble debug
+    - name: usr/local/share/android-sdk
+
+      script: | 
+
+         echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+
+    - name: Build Android release
+
+      script: ./gradlew assemble release
 
     artifacts:
 
