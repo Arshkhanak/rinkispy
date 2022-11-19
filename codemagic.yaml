@@ -1,41 +1,35 @@
-workflows: 
+workflows:
 
-   android-workflow: 
+  native-android:
 
-     name: Android Workflow 
+    name: Native Android
 
-     max_build_duration: 120 
+    max_build_duration: 120
 
-     instance_type: mac_pro 
+    instance_type: mac_mini_m1
 
-     environment:
+    environment:
 
       android_signing:
 
-        - keystore_rinki
-
-      java: 1.8
+        - keystore_Rinki
 
       vars:
 
-          PACKAGE_NAME: "com.rinki.parent"
+        PACKAGE_NAME: "com.rinki.parent"
 
-     scripts:
+    scripts:
 
-         - name: Set Android SDK location
+      - name: Set Android SDK location
 
-    script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+        script: | 
 
-         - name: Build Android release
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
 
-         - name: Build Android debug APK
+      - name: Build Android release
 
-        working_directory: android
-
-     script: ./gradlew assembleRelease
+        script: ./gradlew assemble release
 
     artifacts:
 
       - app/build/outputs/**/*.apk
-
-        
