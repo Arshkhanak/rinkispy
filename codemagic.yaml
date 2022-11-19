@@ -1,23 +1,41 @@
 workflows: 
 
-   android-kmm-workflow: 
+   android-workflow: 
 
-     name: Android KMM Workflow 
+     name: Android Workflow 
 
      max_build_duration: 120 
 
      instance_type: mac_pro 
 
      environment:
-       java: 1.8
-    scripts:
 
-      - name: Build Android debug APK
+      android_signing:
+
+        - keystore_rinki
+
+      java: 1.8
+
+      vars:
+
+          PACKAGE_NAME: "com.rinki.parent"
+
+     scripts:
+
+         - name: Set Android SDK location
+
+    script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+
+         - name: Build Android release
+
+         - name: Build Android debug APK
 
         working_directory: android
 
-        script: ./gradlew assembleRelease
+     script: ./gradlew assembleRelease
 
     artifacts:
 
-      - app/build/outputs/**/**/*.apk
+      - app/build/outputs/**/*.apk
+
+        
