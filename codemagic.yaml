@@ -20,9 +20,9 @@ workflows:
 
     scripts:
 
-      - name: Build Android release
+      - name: Build Android debug
 
-        script: ./gradlew assemble release
+        script: ./gradlew assemble debug
 
     artifacts:
 
