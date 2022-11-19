@@ -12,7 +12,7 @@ workflows:
 
       android_signing:
 
-        - keystore_rinki
+        - Rinki
 
       vars:
 
