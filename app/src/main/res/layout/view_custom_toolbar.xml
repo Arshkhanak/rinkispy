@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.worldcodes.parentalapp.ui.widget.toolbar.CustomToolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.mine.spy.ui.widget.toolbar.CustomToolbar xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/Match"
     android:fitsSystemWindows="true"

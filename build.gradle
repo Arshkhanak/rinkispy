@@ -8,11 +8,9 @@ buildscript {
         glide_version = '4.11.0'
     }
 
-
     repositories {
         google()
-        jcenter()
-        maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
@@ -27,12 +25,9 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        maven { url "https://jitpack.io" }
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots"}
-        maven { url 'https://maven.google.com/' }
-        maven { url "https://dl.bintray.com/romancha/romancha-repo" }
         mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
     }
 
     ext {
