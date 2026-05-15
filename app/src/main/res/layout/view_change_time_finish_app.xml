@@ -16,7 +16,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <com.worldcodes.parentalapp.ui.widget.CustomCheckBox
+        <com.mine.spy.ui.widget.CustomCheckBox
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:id="@+id/check_one_minute_finish_app"/>
@@ -38,7 +38,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <com.worldcodes.parentalapp.ui.widget.CustomCheckBox
+        <com.mine.spy.ui.widget.CustomCheckBox
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:id="@+id/check_two_minute_finish_app" />
@@ -60,7 +60,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <com.worldcodes.parentalapp.ui.widget.CustomCheckBox
+        <com.mine.spy.ui.widget.CustomCheckBox
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:id="@+id/check_five_minute_finish_app" />

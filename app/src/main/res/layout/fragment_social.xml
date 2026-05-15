@@ -6,7 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.worldcodes.parentalapp.ui.widget.CustomConstraintLayout
+    <com.mine.spy.ui.widget.CustomConstraintLayout
         style="@style/Match">
 
         <LinearLayout
@@ -73,7 +73,7 @@
 
         <include layout="@layout/failed_placeholder"/>
 
-    </com.worldcodes.parentalapp.ui.widget.CustomConstraintLayout>
+    </com.mine.spy.ui.widget.CustomConstraintLayout>
 
     <include layout="@layout/view_app_bar"/>
 

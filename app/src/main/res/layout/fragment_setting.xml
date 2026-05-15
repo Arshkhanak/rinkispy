@@ -8,7 +8,7 @@
 
     <include layout="@layout/view_app_bar"/>
 
-    <com.worldcodes.parentalapp.ui.widget.CustomNestedScrollView
+    <com.mine.spy.ui.widget.CustomNestedScrollView
         android:fitsSystemWindows="true"
         android:id="@+id/nested_scroll"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -48,7 +48,7 @@
                         android:textColor="@color/blue_grey_50"
                         android:text="@string/enable_code_access"/>
 
-                    <com.worldcodes.parentalapp.ui.widget.CustomCheckBox
+                    <com.mine.spy.ui.widget.CustomCheckBox
                         android:layout_height="25dp"
                         android:layout_width="25dp"
                         android:clickable="false"
@@ -132,7 +132,7 @@
                         android:textColor="@color/colorGrayTransp"
                         android:text="@string/enable_app_finish"/>
 
-                    <com.worldcodes.parentalapp.ui.widget.CustomCheckBox
+                    <com.mine.spy.ui.widget.CustomCheckBox
                         android:layout_height="25dp"
                         android:layout_width="25dp"
                         android:clickable="false"
@@ -199,6 +199,6 @@
 
         </LinearLayout>
 
-    </com.worldcodes.parentalapp.ui.widget.CustomNestedScrollView>
+    </com.mine.spy.ui.widget.CustomNestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

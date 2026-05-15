@@ -7,7 +7,7 @@
     android:id="@+id/main_view"
     android:background="@color/blue_grey_900">
 
-    <com.worldcodes.parentalapp.ui.widget.CustomFrameLayout
+    <com.mine.spy.ui.widget.CustomFrameLayout
         android:id="@+id/maps_fragment"
         style="@style/Match"
         android:fitsSystemWindows="true" />
