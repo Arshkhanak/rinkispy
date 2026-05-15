@@ -1,1 +1,6 @@
-
+workflows:
+  android:
+    name: build Android version
+    scripts:
+      - ...
+  
